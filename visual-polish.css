@@ -280,7 +280,7 @@ body .music-toggle{height:31px!important;padding:6px 10px!important;font-size:10
 
 /* Safe exit on every chapter briefing. */
 .briefing-back{
-  display:inline-flex;align-items:center;gap:9px;margin:0 0 16px;padding:8px 12px 8px 9px;border:1px solid rgba(220,238,234,.18);border-radius:2px;background:rgba(3,9,12,.55);color:#aab6b3;font:700 var(--fs-xs) ui-monospace,monospace;letter-spacing:.08em;cursor:pointer;transition:border-color .18s,color .18s,background .18s,transform .18s
+  display:inline-flex;align-items:center;gap:9px;margin:0 0 16px;padding:8px 12px 8px 9px;border:1px solid rgba(220,238,234,.18);border-radius:2px;background:rgba(3,9,12,.55);color:#aab6b3;font:700 var(--fs-xs) ui-monospace,monospace;letter-spacing:.08em;text-decoration:none;cursor:pointer;transition:border-color .18s,color .18s,background .18s,transform .18s
 }
 .briefing-back span{display:grid;place-items:center;width:24px;height:24px;border:1px solid currentColor;color:var(--amber,var(--cyan,var(--mint,var(--accent,#d9b875))));font-size:17px;line-height:1}
 .briefing-back:hover{transform:translateX(-2px);border-color:var(--amber,var(--cyan,var(--mint,var(--accent,#d9b875))));background:rgba(220,238,234,.06);color:#f0f3f1}
