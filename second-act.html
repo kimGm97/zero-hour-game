@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#111722">
+  <title>零点行动 · 第二幕</title>
+  <link rel="stylesheet" href="campaign-advanced.css">
+  <link rel="stylesheet" href="visual-polish.css">
+  <script src="visual-polish.js"></script>
+  <script src="npc-dialogue.js"></script>
+  <script src="hud-layout.js"></script>
+</head>
+<body data-music="tower">
+  <main class="app" id="app">
+    <canvas id="canvas" aria-label="俯视角时间循环调查任务"></canvas>
+    <div class="grain"></div><div class="weather"></div><div class="vignette"></div><div class="fade" id="fade"></div>
+    <header class="top">
+      <div class="mission"><span class="eyebrow" id="levelCode">LEVEL 07 / SECOND ACT</span><b id="levelTitle">焚毁档案</b><button class="restart-one" id="restartOne">↺ 第一关</button></div>
+      <div class="clock" id="clock" data-label="距事件发生">05:00</div>
+      <div class="loop"><span class="eyebrow">TIME LOOP</span><b id="loop">循环 01</b></div>
+    </header>
+    <section class="knowledge-hud" aria-label="调查档案">
+      <div class="knowledge-title"><span>调查档案</span><b>第二幕</b></div>
+      <aside class="intel"><div class="head"><span class="eyebrow">行动情报</span><b id="intelCount">0 / 4</b></div><div class="list" id="clueList"></div></aside>
+      <aside class="timeline"><div class="head"><span class="eyebrow">已知事件</span><b>ACT II</b></div><div class="list" id="timeList"></div></aside>
+    </section>
+    <div class="prompt" id="prompt"><span class="key">E</span><span id="promptText">调查</span></div>
+    <div class="toast" id="toast"></div>
+    <div class="controls"><span class="control"><b>WASD</b> 移动</span><span class="control"><b>E</b> 互动</span><span class="control"><b>Q</b> 快进</span><span class="control"><b>R</b> 回溯</span></div>
+    <div class="status"><span class="badge" id="badgeA">行动 A：未完成</span><span class="badge" id="badgeB">行动 B：未完成</span><span class="badge" id="badgeC" hidden>行动 C：未完成</span><span class="badge" id="targetBadge">核心人物：未控制</span><span class="badge" id="fastBadge">时间 ×1</span></div>
+    <div class="mobile"><div class="stick" id="stick"><div class="knob" id="knob"></div></div><button class="touch-e" id="touchE">E</button><button class="touch-q" id="touchQ">快进</button><button class="touch-r" id="touchR">回溯 R</button></div>
+  </main>
+  <div class="rewind-overlay hidden" id="rewindOverlay"><div class="rewind-wrap"><div class="rewind-clock"><i class="rewind-hand hour"></i><i class="rewind-hand minute"></i></div><div class="rewind-copy">TIME REVERSAL / 时间回溯</div><div class="rewind-time"></div></div></div>
+  <div class="prologue hidden" id="prologue"><div class="prologue-note" id="prologueNote"></div><div class="alarm"></div><div class="black"><div class="failure"><span id="failureCode"></span><h1 id="failureTitle"></h1><p id="failureBody"></p><button class="primary" id="wake">回到五分钟前</button></div></div></div>
+  <div class="modal hidden" id="modal"><div class="card" id="card"></div></div>
+  <script src="campaign-progress.js"></script>
+  <script src="campaign-second-act.js"></script>
+  <script src="audio-system.js"></script>
+</body>
+</html>
